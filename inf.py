@@ -12,8 +12,8 @@ def predict(image):
     output_details = interpreter.get_output_details()
 
     input_shape = input_details[0]['shape']
-    print(input_shape)
-    print("*"*50, input_details)
+    # print(input_shape)
+    # print("*"*50, input_details)
     interpreter.set_tensor(input_details[0]['index'], image)
 
     interpreter.invoke()
